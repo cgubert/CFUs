@@ -7,8 +7,22 @@
 #Dilution factor (DF): ratio of final volume/aliquot volume 
 #(final volume = aliquot + diluent)
 
+#get user data into acceptable format
+DFs<-c("your.dilutions")
+colonies<-c("your.counts")
+replicates<-c("your.reps")
+data.matrix<-function(data,nrows,ncols){
+  data<-matrix(colonies,nrows=length(DFs),ncols=length(replicates))
+  rownames(data)<-DFs
+}
+
+
 #Should be able to calculate CFUs from a data set/list of colony count values
-#Input data from colony counts I did last week to use 
+#Input data from colony counts I did last week to use
+sample.data<-c(1872,2042,706,782,123,95,13,13,4,1)
+CFUrows<-c("1x10^4","1x10^5","1x10^6","1x10^7","1x10^8")
+CFUsample<-matrix(data=sample.data,nrow=5,ncol=2,byrow=TRUE)
+rownames(CFUsample)<-CFUrows
 
 CFU<-function(colonies,DF){
   
