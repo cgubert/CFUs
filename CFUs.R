@@ -6,6 +6,21 @@
 #so this function would look something like "DF(CFU=15.0*10^8)
 #Dilution factor (DF): ratio of final volume/aliquot volume 
 #(final volume = aliquot + diluent)
+#have users input dilution factors as ratio format (ex. 1:10)
+#also write a function to calculate dilution factor from volumes
+#could input two vectors, one with final volumes, one with aliquot volume
+
+
+#sample data for running dilution factor function
+final.vols<-rep(.500,8)
+dilutent.vols<-rep(.450,8)
+aliquot.vols<-rep(0.05,8)
+dilution.factor<-function(final.vols,aliquot.vols,dilutent.vols){
+  if (final.vols,aliquot.vols){final.vols/aliquot.vols}
+  else if (aliquot.vols,dilutent.vols){(aliquot.vols+dilutent.vols)/aliquot.vols}
+  
+  
+}
 
 #get user data into acceptable format
 DFs<-c("your.dilutions")
