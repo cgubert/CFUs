@@ -38,20 +38,20 @@ dilution.factor<-function(final.vols,aliquot.vols){
 #Should be able to calculate CFUs from a data set/list of colony count values
 #Input data from colony counts I did last week to use
 colonies<-c(1872,2042,706,782,123,95,13,13,4,1)
-DFs
-CFUrows<-c("10^4","10^5","10^6","10^7","10^8")
+DFs<-c("1:10^4","1:10^5","1:10^6","1:10^7","1:10^8")
+CFUrows<-c("1:10^4","1:10^5","1:10^6","1:10^7","1:10^8")
 CFUsample<-matrix(data=sample.data,nrow=5,ncol=2,byrow=TRUE)
 rownames(CFUsample)<-CFUrows
 #get user data into acceptable format
 DFs<-c("your.dilutions")
 colonies<-c("your.counts")
 replicates<-c("your.reps")
-data.matrix<-function(colonies,DFs,replicates){
-  data<-matrix(colonies,nrows=length(DFs),ncols=length(replicates))
+data.matrix<-function(colonies,DFs=5){
+  data<-matrix("colonies",byrow=TRUE,nrow=length("DFs"),ncol=(2))
   rownames(data)<-DFs
 }
 
 
-CFU<-function(colonies,DF){
+CFU<-function(){
   
 }
