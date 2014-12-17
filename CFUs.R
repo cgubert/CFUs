@@ -39,7 +39,7 @@ dilution.factor<-function(final.vols,aliquot.vols){
 #Input data from colony counts I did last week to use
 colonies<-c(1872,2042,706,782,123,95,13,13,4,1)
 DFs
-CFUrows<-c("1x10^4","1x10^5","1x10^6","1x10^7","1x10^8")
+CFUrows<-c("10^4","10^5","10^6","10^7","10^8")
 CFUsample<-matrix(data=sample.data,nrow=5,ncol=2,byrow=TRUE)
 rownames(CFUsample)<-CFUrows
 #get user data into acceptable format
