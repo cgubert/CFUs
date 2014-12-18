@@ -46,9 +46,10 @@ rownames(CFUsample)<-CFUrows
 DFs<-c("your.dilutions")
 colonies<-c("your.counts")
 replicates<-c("your.reps")
-data.matrix<-function(colonies,DFs=5){
-  data<-matrix("colonies",byrow=TRUE,nrow=length("DFs"),ncol=(2))
-  rownames(data)<-DFs
+
+data.matrix<-function(counts=colonies,DFs=5){
+  counts.matrix<-matrix(colonies,byrow=TRUE,nrow=length(DFs),ncol=(2))
+  rownames(counts.matrix)<-DFs
 }
 
 
